@@ -77,9 +77,9 @@ public class Program {
 
         for (OrderItem o : order.getItens()){
             System.out.println(o.getProduct().getName()
-                    + ", $" + o.getProduct().getPrice()
+                    + ", $" + String.format("%.2f",o.getProduct().getPrice())
                     + ", Quantity: " + o.getQuantity()
-                    + ", Subtotal: $" + o.subTotal());
+                    + ", Subtotal: $" + String.format("%.2f",o.subTotal()));
         }
 
         System.out.println("Total price: $" + order.total());
